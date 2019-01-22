@@ -31,6 +31,7 @@
 		9305061221F6E8A8006C0120 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		9305061421F6F021006C0120 /* Cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cost.swift; sourceTree = "<group>"; };
 		9305061621F6F2F1006C0120 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
+		9314A96E21F706A6002B673D /* flujopago-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flujopago-Bridging-Header.h"; sourceTree = "<group>"; };
 		9320666D21F6C4C600357C61 /* PayMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethod.swift; sourceTree = "<group>"; };
 		9384B98421EEC39300AA9F42 /* StepOneMountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneMountViewController.swift; sourceTree = "<group>"; };
 		9384B98621EEC51600AA9F42 /* StepTwoPayMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoPayMethodViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 				93E463A121EC25C000AEAD5D /* AppDelegate.swift */,
 				93E463A821EC25C100AEAD5D /* Assets.xcassets */,
 				93E463AD21EC25C100AEAD5D /* Info.plist */,
+				9314A96E21F706A6002B673D /* flujopago-Bridging-Header.h */,
 			);
 			path = flujopago;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 				TargetAttributes = {
 					93E4639D21EC25C000AEAD5D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -249,11 +252,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-flujopago/Pods-flujopago-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireMapper/AlamofireMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,6 +429,7 @@
 			baseConfigurationReference = CFD37A2414E191615F3A203B /* Pods-flujopago.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MWN22WZZ3Z;
 				INFOPLIST_FILE = flujopago/Info.plist;
@@ -433,6 +439,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rastorga.flujopago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "flujopago/flujopago-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,6 +451,7 @@
 			baseConfigurationReference = 16717043272598ED811BDB27 /* Pods-flujopago.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MWN22WZZ3Z;
 				INFOPLIST_FILE = flujopago/Info.plist;
@@ -452,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rastorga.flujopago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "flujopago/flujopago-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

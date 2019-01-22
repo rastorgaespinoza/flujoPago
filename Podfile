@@ -8,5 +8,6 @@ target 'flujopago' do
   	# Pods for flujopago
 	pod 'Alamofire'
 	pod 'AlamofireMapper'
+	pod 'JGProgressHUD'
 
 end

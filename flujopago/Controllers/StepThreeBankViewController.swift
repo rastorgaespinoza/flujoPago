@@ -29,11 +29,17 @@ class StepThreeBankViewController: UIViewController {
         
         pickUp(bankTextField)
         
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Cargando"
+        hud.show(in: self.view)
+        
         ApiAccess.sharedInstance().getBanks(ApiAccess.endpointBanks + (transaction?.payMethod?.id!)!, completionHandler: { (banks, error) in
+            hud.dismiss(afterDelay: 1.0)
             guard error == nil else {
                 //TODO: manejar error
                 return
             }
+            
             if let banks = banks {
                 self.bankData = banks
             }
@@ -99,6 +105,10 @@ class StepThreeBankViewController: UIViewController {
 // MARK: - <#UIPickerViewDelegate, UIPickerViewDataSource#>
 extension StepThreeBankViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
     // Numbero de columnas de datos
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -115,15 +125,16 @@ extension StepThreeBankViewController: UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        transaction?.bank = bankData[row]
-        self.bankTextField.text = bankData[row].name
-        
-        self.bankTextField.leftViewMode = .always
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        let image = bankData[row].image
-        imageView.image = image
-        self.bankTextField.leftView = imageView
-        self.bankTextField.leftView?.reloadInputViews()
+        if(!bankData.isEmpty){
+            transaction?.bank = bankData[row]
+            self.bankTextField.text = bankData[row].name
+            self.bankTextField.leftViewMode = .always
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            let image = bankData[row].image
+            imageView.image = image
+            self.bankTextField.leftView = imageView
+            self.bankTextField.leftView?.reloadInputViews()
+        }
     }
     
     //extract from: https://stackoverflow.com/questions/27769246/how-can-i-get-images-to-appear-in-ui-pickerview-component-in-swift

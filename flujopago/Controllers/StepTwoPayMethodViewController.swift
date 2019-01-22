@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class StepTwoPayMethodViewController: UIViewController {
 
+    // MARK: - Properties
     var transaction: Transaction?
     var delegate: TransactionDelegate?
 
     var pickerView: UIPickerView = UIPickerView()
-    var payMethodDataSource = [PayMethod]()
+    var payMethodDataSource = [PayMethod]() //Origen de datos para pickerView
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var payMethodTextField: UITextField!
@@ -28,7 +30,12 @@ class StepTwoPayMethodViewController: UIViewController {
         
         pickUp(payMethodTextField)
 
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Cargando"
+        hud.show(in: self.view)
+
         ApiAccess.sharedInstance().getPayMethod(ApiAccess.endpointPayMethods) { (paymethods, error) in
+            hud.dismiss(afterDelay: 1.0)
             guard let paymethods = paymethods else {
                 //TODO: implementar alguna validacion
                 return
@@ -102,6 +109,10 @@ class StepTwoPayMethodViewController: UIViewController {
 // MARK: - <#UIPickerViewDelegate, UIPickerViewDataSource#>
 extension StepTwoPayMethodViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
     // Numbero de columnas de datos
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -118,15 +129,18 @@ extension StepTwoPayMethodViewController: UIPickerViewDelegate, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        transaction?.payMethod = payMethodDataSource[row]
-        self.payMethodTextField.text = payMethodDataSource[row].name
-
-        self.payMethodTextField.leftViewMode = .always
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        let image = payMethodDataSource[row].image
-        imageView.image = image
-        self.payMethodTextField.leftView = imageView
-        self.payMethodTextField.leftView?.reloadInputViews()
+        if(!payMethodDataSource.isEmpty){
+            transaction?.payMethod = payMethodDataSource[row]
+            self.payMethodTextField.text = payMethodDataSource[row].name
+            
+            self.payMethodTextField.leftViewMode = .always
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            let image = payMethodDataSource[row].image
+            imageView.image = image
+            self.payMethodTextField.leftView = imageView
+            self.payMethodTextField.leftView?.reloadInputViews()
+        }
+        
     }
     
     //extract from: https://stackoverflow.com/questions/27769246/how-can-i-get-images-to-appear-in-ui-pickerview-component-in-swift
@@ -163,6 +177,4 @@ extension StepTwoPayMethodViewController: UIPickerViewDelegate, UIPickerViewData
         
         return myView
     }
-
-
 }

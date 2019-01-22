@@ -68,6 +68,8 @@ extension StartViewController: TransactionDelegate {
             feeValue.text = self.transaction!.numFees!.description
             
             setLabelsVisibility(true)
+        }else{
+            setLabelsVisibility(false)
         }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class StepOneMountViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     var transaction: Transaction?
     var delegate: TransactionDelegate?
     
@@ -19,14 +19,33 @@ class StepOneMountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mountTextField.delegate = self
+        
         transaction = Transaction()
+        
+        mountTextField.delegate = self
         continueButton.isEnabled = false
+        
+        //Utilizado para cerrar teclado al hacer tap fuera del cuadro de texto
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(StepOneMountViewController.didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    //Cierra el teclado al hacer tap en la pantalla.
+    //extract from https://stackoverflow.com/questions/27878732/swift-how-to-dismiss-number-keyboard-after-tapping-outside-of-the-textfield
+    @objc func didTapView(){
+        self.view.endEditing(true)
     }
     
     @IBAction func toPayMethods(_ sender: Any) {
         performSegue(withIdentifier: "segueStepOne", sender: nil)
     }
+    
+    @IBAction func cancel(_ sender: Any) {
+        transaction = nil
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +55,7 @@ class StepOneMountViewController: UIViewController {
         }
     }
 
+    //Se encarga de verificar si campo de texto tiene caracteres para habilitar botón Continuar
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         if let text = sender.text {
             transaction?.mount = text.isEmpty ? 0 : Int(text)
@@ -47,7 +67,16 @@ class StepOneMountViewController: UIViewController {
     
 }
 
+// MARK: - UITextFieldDelegate
 extension StepOneMountViewController: UITextFieldDelegate{
+    
+    //Revisa que el texto ingresado sean solo caracteres numericos
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+            return false
+        }
+        return true
+    }
     
     
     func textFieldDidEndEditing(_ textField: UITextField) {

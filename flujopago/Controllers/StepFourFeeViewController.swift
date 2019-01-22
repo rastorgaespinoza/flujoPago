@@ -30,10 +30,16 @@ class StepFourFeeViewController: UIViewController {
         confirmButton.isEnabled = false
         pickUp(numFeeTextField)
         
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Cargando"
+        hud.show(in: self.view)
+        
         var url = ApiAccess.endpointRecomendedMessage.replacingOccurrences(of: ApiAccess.mountRplc, with: transaction!.mount!.description)
         url = url.replacingOccurrences(of: ApiAccess.payMethodRplc, with: transaction!.payMethod!.id!)
         url = url.replacingOccurrences(of: ApiAccess.issuerRplc, with: transaction!.bank!.id!)
         ApiAccess.sharedInstance().getRecommendedMessage(url, completionHandler: { (costs, error) in
+            hud.dismiss(afterDelay: 1.0)
+            
             guard error == nil else {
                 //TODO: manejar error
                 return
@@ -113,6 +119,10 @@ class StepFourFeeViewController: UIViewController {
 // MARK: - <#UIPickerViewDelegate, UIPickerViewDataSource#>
 extension StepFourFeeViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
     // Numbero de columnas de datos
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -129,9 +139,12 @@ extension StepFourFeeViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        transaction?.numFees = costDataSource[row].installments
-        self.numFeeTextField.text = costDataSource[row].installments?.description
-        self.recommendedMessageLabel.text = costDataSource[row].recommended_message
+        if(!costDataSource.isEmpty){
+            transaction?.numFees = costDataSource[row].installments
+            self.numFeeTextField.text = costDataSource[row].installments?.description
+            self.recommendedMessageLabel.text = costDataSource[row].recommended_message
+        }
+        
     }
     
 }
