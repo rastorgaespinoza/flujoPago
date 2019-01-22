@@ -1,0 +1,6 @@
+framework module Pods_flujopago {
+  umbrella header "Pods-flujopago-umbrella.h"
+
+  export *
+  module * { export * }
+}

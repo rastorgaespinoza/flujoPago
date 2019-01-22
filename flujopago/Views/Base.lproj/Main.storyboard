@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yap-NG-p5X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="Pp5-WE-9Ml">
+            <objects>
+                <viewController id="yap-NG-p5X" customClass="StartViewController" customModule="flujopago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETZ-OH-K6j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klH-Gw-K0H">
+                                <rect key="frame" x="133" y="557" width="109" height="30"/>
+                                <state key="normal" title="Comenzar pago"/>
+                                <connections>
+                                    <action selector="popover" destination="yap-NG-p5X" eventType="touchUpInside" id="f0d-X1-3ty"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-Dn-KTu" userLabel="results">
+                                <rect key="frame" x="40" y="302.5" width="295" height="82"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vXV-gE-g2f" userLabel="labels">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNx-Xr-pkl" userLabel="monto">
+                                                <rect key="frame" x="91" y="0.0" width="51.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medio de Pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vG-Wj-ElR" userLabel="medioPago">
+                                                <rect key="frame" x="24.5" y="20.5" width="118" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-JL-uq0" userLabel="banco">
+                                                <rect key="frame" x="92.5" y="41" width="50" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de cuotas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-gS-tKZ" userLabel="cuotas">
+                                                <rect key="frame" x="0.0" y="61.5" width="142.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="avv-lL-FXq" userLabel="values">
+                                        <rect key="frame" x="152.5" y="0.0" width="142.5" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se5-V5-Iat" userLabel="montoValue">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="medio Pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20x-Qx-69K" userLabel="medioPagoValue">
+                                                <rect key="frame" x="0.0" y="20.5" width="142.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="banco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaK-9W-db4" userLabel="bancoValue">
+                                                <rect key="frame" x="0.0" y="41" width="142.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUp-2A-1TT" userLabel="cuotasValue">
+                                                <rect key="frame" x="0.0" y="61.5" width="142.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="klH-Gw-K0H" firstAttribute="centerX" secondItem="ETZ-OH-K6j" secondAttribute="centerX" id="4BR-b3-UpR"/>
+                            <constraint firstItem="yEs-Dn-KTu" firstAttribute="leading" secondItem="g2c-Fr-glL" secondAttribute="leading" constant="40" id="5FS-CP-Lio"/>
+                            <constraint firstItem="g2c-Fr-glL" firstAttribute="bottom" secondItem="klH-Gw-K0H" secondAttribute="bottom" constant="80" id="NNY-Zq-eYJ"/>
+                            <constraint firstItem="yEs-Dn-KTu" firstAttribute="centerY" secondItem="g2c-Fr-glL" secondAttribute="centerY" id="QgD-uE-Myr"/>
+                            <constraint firstItem="g2c-Fr-glL" firstAttribute="trailing" secondItem="yEs-Dn-KTu" secondAttribute="trailing" constant="40" id="UwM-6g-KTc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g2c-Fr-glL"/>
+                    </view>
+                    <connections>
+                        <outlet property="bankValue" destination="YaK-9W-db4" id="SUK-JG-lkO"/>
+                        <outlet property="feeValue" destination="dUp-2A-1TT" id="ZFK-jI-aup"/>
+                        <outlet property="labelStackView" destination="vXV-gE-g2f" id="yyD-86-sTG"/>
+                        <outlet property="mountValue" destination="se5-V5-Iat" id="IRJ-aX-yd3"/>
+                        <outlet property="payMethodValue" destination="20x-Qx-69K" id="5rz-PA-rYa"/>
+                        <outlet property="valuesStackView" destination="avv-lL-FXq" id="Kgm-8W-H45"/>
+                        <segue destination="G9e-RX-qL7" kind="presentation" identifier="FirstSegue" id="zT9-cc-Vbx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbC-Hl-sRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759.20000000000005" y="133.5832083958021"/>
+        </scene>
+        <!--Monto-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StepOneMountViewController" id="BYZ-38-t0r" customClass="StepOneMountViewController" customModule="flujopago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione monto a pagar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0d1-Of-i2X">
+                                <rect key="frame" x="50" y="350.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="eFu-Ia-2R4"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flujo Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEU-dX-mX7">
+                                <rect key="frame" x="134" y="100" width="107" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese el monto a pagar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLE-P1-G8N">
+                                <rect key="frame" x="97.5" y="198" width="180" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf0-dz-a1w">
+                                <rect key="frame" x="154" y="557" width="67" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <action selector="toPayMethods:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsA-uO-anZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paso 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utq-vj-FFa">
+                                <rect key="frame" x="161" y="157" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Utq-vj-FFa" firstAttribute="top" secondItem="AEU-dX-mX7" secondAttribute="bottom" constant="30" id="M2m-Xl-eZb"/>
+                            <constraint firstItem="Utq-vj-FFa" firstAttribute="centerX" secondItem="AEU-dX-mX7" secondAttribute="centerX" id="TTl-7J-RSY"/>
+                            <constraint firstItem="sLE-P1-G8N" firstAttribute="top" secondItem="Utq-vj-FFa" secondAttribute="bottom" constant="20" id="YBn-Ns-YtO"/>
+                            <constraint firstItem="AEU-dX-mX7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cqu-dM-5ly"/>
+                            <constraint firstItem="sLE-P1-G8N" firstAttribute="centerX" secondItem="Utq-vj-FFa" secondAttribute="centerX" id="dO3-e9-bIh"/>
+                            <constraint firstItem="0d1-Of-i2X" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hKG-ye-UNz"/>
+                            <constraint firstItem="0d1-Of-i2X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hbE-Pt-isA"/>
+                            <constraint firstItem="sLE-P1-G8N" firstAttribute="centerX" secondItem="AEU-dX-mX7" secondAttribute="centerX" id="jX0-6E-bqT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0d1-Of-i2X" secondAttribute="trailing" constant="50" id="l1h-ua-Oj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nf0-dz-a1w" secondAttribute="bottom" constant="80" id="puq-SS-2Zz"/>
+                            <constraint firstItem="AEU-dX-mX7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="tID-6z-BVl"/>
+                            <constraint firstItem="nf0-dz-a1w" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yU3-lA-sUI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Monto" id="ab7-AH-2P1"/>
+                    <connections>
+                        <outlet property="continueButton" destination="nf0-dz-a1w" id="Nmk-bi-hYQ"/>
+                        <outlet property="mountTextField" destination="0d1-Of-i2X" id="mpp-JG-bbE"/>
+                        <segue destination="Y2E-PS-f0C" kind="show" identifier="segueStepOne" id="a3Q-SW-2Eq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Medio Pago-->
+        <scene sceneID="gd9-fi-9ab">
+            <objects>
+                <viewController title="Medio Pago" id="Y2E-PS-f0C" customClass="StepTwoPayMethodViewController" customModule="flujopago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WwI-AW-vhc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flujo Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-Ck-5mR">
+                                <rect key="frame" x="134" y="100" width="107" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paso 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-SV-QYl">
+                                <rect key="frame" x="160" y="157" width="55" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selección un medio de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqD-eJ-Ulf">
+                                <rect key="frame" x="85" y="199" width="205" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione medio de pago" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Oo-ix-j67">
+                                <rect key="frame" x="50" y="350.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <connections>
+                                    <action selector="editingDidEnd:" destination="Y2E-PS-f0C" eventType="editingDidEnd" id="Dul-PV-1Ra"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-4A-BYJ">
+                                <rect key="frame" x="154" y="557" width="67" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <action selector="toSelectBank:" destination="Y2E-PS-f0C" eventType="touchUpInside" id="MZL-pE-Zti"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXQ-Ck-5mR" firstAttribute="top" secondItem="adm-Se-tdI" secondAttribute="top" constant="36" id="1n4-wL-RJq"/>
+                            <constraint firstItem="adm-Se-tdI" firstAttribute="bottom" secondItem="q6G-4A-BYJ" secondAttribute="bottom" constant="80" id="5Sh-lL-SVW"/>
+                            <constraint firstItem="LSs-SV-QYl" firstAttribute="top" secondItem="bXQ-Ck-5mR" secondAttribute="bottom" constant="30" id="80A-0H-9rK"/>
+                            <constraint firstItem="bXQ-Ck-5mR" firstAttribute="centerX" secondItem="adm-Se-tdI" secondAttribute="centerX" id="ETj-MK-oRy"/>
+                            <constraint firstItem="RqD-eJ-Ulf" firstAttribute="top" secondItem="LSs-SV-QYl" secondAttribute="bottom" constant="20" id="GhD-ii-V8x"/>
+                            <constraint firstItem="8Oo-ix-j67" firstAttribute="centerY" secondItem="adm-Se-tdI" secondAttribute="centerY" id="PUr-ra-RaM"/>
+                            <constraint firstItem="LSs-SV-QYl" firstAttribute="centerX" secondItem="bXQ-Ck-5mR" secondAttribute="centerX" id="Yzc-fP-ZQz"/>
+                            <constraint firstItem="q6G-4A-BYJ" firstAttribute="centerX" secondItem="adm-Se-tdI" secondAttribute="centerX" id="poe-Dn-exI"/>
+                            <constraint firstItem="8Oo-ix-j67" firstAttribute="leading" secondItem="adm-Se-tdI" secondAttribute="leading" constant="50" id="qwX-5Y-GoA"/>
+                            <constraint firstItem="adm-Se-tdI" firstAttribute="trailing" secondItem="8Oo-ix-j67" secondAttribute="trailing" constant="50" id="zeW-Ro-SbO"/>
+                            <constraint firstItem="RqD-eJ-Ulf" firstAttribute="centerX" secondItem="bXQ-Ck-5mR" secondAttribute="centerX" id="zpJ-xX-NTi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="adm-Se-tdI"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="q6G-4A-BYJ" id="nuk-MP-CQE"/>
+                        <outlet property="payMethodTextField" destination="8Oo-ix-j67" id="WPA-9Y-BOt"/>
+                        <segue destination="15h-Q1-GnF" kind="show" identifier="segueStepTwo" id="2Fk-4j-4eu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbr-YY-pV1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="133.5832083958021"/>
+        </scene>
+        <!--Banco-->
+        <scene sceneID="DIV-NP-tB0">
+            <objects>
+                <viewController title="Banco" id="15h-Q1-GnF" customClass="StepThreeBankViewController" customModule="flujopago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfx-Ad-chY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flujo Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adm-Zi-yUN">
+                                <rect key="frame" x="134" y="100" width="107" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paso 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWJ-iD-FsF">
+                                <rect key="frame" x="160" y="157" width="55" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona un banco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7Y-d3-8n7">
+                                <rect key="frame" x="112" y="199" width="151" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jo0-cx-VY8">
+                                <rect key="frame" x="154" y="557" width="67" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <action selector="toSelectFee:" destination="15h-Q1-GnF" eventType="touchUpInside" id="JwB-Xr-GwB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione banco..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol3-SS-IEt" userLabel="selectBancoTextField">
+                                <rect key="frame" x="50" y="350.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <connections>
+                                    <action selector="editingDidEnd:" destination="15h-Q1-GnF" eventType="editingDidEnd" id="s74-H5-QXy"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B3s-mt-UXF" firstAttribute="bottom" secondItem="Jo0-cx-VY8" secondAttribute="bottom" constant="80" id="1YS-Nt-LfE"/>
+                            <constraint firstItem="Ol3-SS-IEt" firstAttribute="centerY" secondItem="B3s-mt-UXF" secondAttribute="centerY" id="2a8-1b-eN7"/>
+                            <constraint firstItem="B3s-mt-UXF" firstAttribute="trailing" secondItem="Ol3-SS-IEt" secondAttribute="trailing" constant="50" id="Nej-52-Fhx"/>
+                            <constraint firstItem="adm-Zi-yUN" firstAttribute="top" secondItem="B3s-mt-UXF" secondAttribute="top" constant="36" id="VYM-IJ-zZo"/>
+                            <constraint firstItem="d7Y-d3-8n7" firstAttribute="centerX" secondItem="adm-Zi-yUN" secondAttribute="centerX" id="WZq-oN-eiN"/>
+                            <constraint firstItem="adm-Zi-yUN" firstAttribute="centerX" secondItem="B3s-mt-UXF" secondAttribute="centerX" id="eoc-g5-rF7"/>
+                            <constraint firstItem="oWJ-iD-FsF" firstAttribute="centerX" secondItem="adm-Zi-yUN" secondAttribute="centerX" id="gA9-aI-xO6"/>
+                            <constraint firstItem="Jo0-cx-VY8" firstAttribute="centerX" secondItem="B3s-mt-UXF" secondAttribute="centerX" id="kXE-zP-SpO"/>
+                            <constraint firstItem="Ol3-SS-IEt" firstAttribute="leading" secondItem="B3s-mt-UXF" secondAttribute="leading" constant="50" id="mwC-IQ-fbS"/>
+                            <constraint firstItem="oWJ-iD-FsF" firstAttribute="top" secondItem="adm-Zi-yUN" secondAttribute="bottom" constant="30" id="wj2-VW-5mV"/>
+                            <constraint firstItem="d7Y-d3-8n7" firstAttribute="top" secondItem="oWJ-iD-FsF" secondAttribute="bottom" constant="20" id="xoG-M8-4TY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B3s-mt-UXF"/>
+                    </view>
+                    <connections>
+                        <outlet property="bankTextField" destination="Ol3-SS-IEt" id="Ggv-c2-qm7"/>
+                        <outlet property="continueButton" destination="Jo0-cx-VY8" id="UqC-8E-Wkx"/>
+                        <segue destination="OTL-pi-pIS" kind="show" identifier="segueStepThree" id="HJC-D9-DWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6py-cN-kJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="133.5832083958021"/>
+        </scene>
+        <!--Cuotas-->
+        <scene sceneID="lbk-Pv-AyJ">
+            <objects>
+                <viewController title="Cuotas" id="OTL-pi-pIS" customClass="StepFourFeeViewController" customModule="flujopago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VwE-Qh-ztY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flujo Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBW-dl-A1e">
+                                <rect key="frame" x="134" y="100" width="107" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paso 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-8e-z7q">
+                                <rect key="frame" x="160" y="157" width="56" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona el número de cuotas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukj-xH-yan">
+                                <rect key="frame" x="71.5" y="199" width="231" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kn-Ng-jrf">
+                                <rect key="frame" x="153" y="557" width="69" height="30"/>
+                                <state key="normal" title="Confirmar"/>
+                                <connections>
+                                    <action selector="saveTransaction:" destination="OTL-pi-pIS" eventType="touchUpInside" id="ihB-JQ-8Wg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione número de cuotas" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-5U-wwP" userLabel="selectBancoTextField">
+                                <rect key="frame" x="50" y="350.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <connections>
+                                    <action selector="editingDidEnd:" destination="OTL-pi-pIS" eventType="editingDidEnd" id="vtB-n4-JZi"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecommendedMessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blD-6G-T3X">
+                                <rect key="frame" x="94.5" y="410.5" width="185" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Kn-Ng-jrf" firstAttribute="centerX" secondItem="wbP-Ld-dOW" secondAttribute="centerX" id="5yi-OO-WCX"/>
+                            <constraint firstItem="bHQ-8e-z7q" firstAttribute="centerX" secondItem="WBW-dl-A1e" secondAttribute="centerX" id="7IG-Um-x5S"/>
+                            <constraint firstItem="E2U-5U-wwP" firstAttribute="centerY" secondItem="wbP-Ld-dOW" secondAttribute="centerY" id="DTm-c5-NGq"/>
+                            <constraint firstItem="blD-6G-T3X" firstAttribute="top" secondItem="E2U-5U-wwP" secondAttribute="bottom" constant="30" id="LMU-kv-SW3"/>
+                            <constraint firstItem="E2U-5U-wwP" firstAttribute="leading" secondItem="wbP-Ld-dOW" secondAttribute="leading" constant="50" id="Qkc-e2-srt"/>
+                            <constraint firstItem="wbP-Ld-dOW" firstAttribute="trailing" secondItem="E2U-5U-wwP" secondAttribute="trailing" constant="50" id="Quj-k5-B8Z"/>
+                            <constraint firstItem="WBW-dl-A1e" firstAttribute="centerX" secondItem="wbP-Ld-dOW" secondAttribute="centerX" id="RBn-QB-cOf"/>
+                            <constraint firstItem="bHQ-8e-z7q" firstAttribute="top" secondItem="WBW-dl-A1e" secondAttribute="bottom" constant="30" id="SDp-FN-diP"/>
+                            <constraint firstItem="WBW-dl-A1e" firstAttribute="top" secondItem="wbP-Ld-dOW" secondAttribute="top" constant="36" id="bqT-CU-uWI"/>
+                            <constraint firstItem="blD-6G-T3X" firstAttribute="centerX" secondItem="E2U-5U-wwP" secondAttribute="centerX" id="ctc-CR-Cy6"/>
+                            <constraint firstItem="ukj-xH-yan" firstAttribute="centerX" secondItem="WBW-dl-A1e" secondAttribute="centerX" id="mrq-me-MpI"/>
+                            <constraint firstItem="ukj-xH-yan" firstAttribute="top" secondItem="bHQ-8e-z7q" secondAttribute="bottom" constant="20" id="usS-iU-7dV"/>
+                            <constraint firstItem="wbP-Ld-dOW" firstAttribute="bottom" secondItem="0Kn-Ng-jrf" secondAttribute="bottom" constant="80" id="yNl-2A-XjC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wbP-Ld-dOW"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="0Kn-Ng-jrf" id="rmq-Us-ebG"/>
+                        <outlet property="numFeeTextField" destination="E2U-5U-wwP" id="JL1-rC-Ls9"/>
+                        <outlet property="recommendedMessageLabel" destination="blD-6G-T3X" id="8tS-4E-f7N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfD-Ef-NtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3312.8000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="02F-lg-dxw">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationVCStepOneID" automaticallyAdjustsScrollViewInsets="NO" id="G9e-RX-qL7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ov7-69-xxe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YJX-SP-DXC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kht-sH-sYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="134"/>
+        </scene>
+    </scenes>
+</document>

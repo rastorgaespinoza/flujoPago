@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		836143441EE0C26FD6F50295 /* Pods_flujopago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B92ECF22E4DDF62665AF170 /* Pods_flujopago.framework */; };
+		9305061321F6E8A8006C0120 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305061221F6E8A8006C0120 /* Bank.swift */; };
+		9305061521F6F021006C0120 /* Cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305061421F6F021006C0120 /* Cost.swift */; };
+		9305061721F6F2F1006C0120 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305061621F6F2F1006C0120 /* Installment.swift */; };
+		9320666E21F6C4C600357C61 /* PayMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320666D21F6C4C600357C61 /* PayMethod.swift */; };
+		9384B98521EEC39300AA9F42 /* StepOneMountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384B98421EEC39300AA9F42 /* StepOneMountViewController.swift */; };
+		9384B98721EEC51600AA9F42 /* StepTwoPayMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384B98621EEC51600AA9F42 /* StepTwoPayMethodViewController.swift */; };
+		9384B98921EEC52E00AA9F42 /* StepThreeBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384B98821EEC52E00AA9F42 /* StepThreeBankViewController.swift */; };
+		9384B98B21EEC54700AA9F42 /* StepFourFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384B98A21EEC54700AA9F42 /* StepFourFeeViewController.swift */; };
+		9391A4A321F2D1470097C1CB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391A4A221F2D1470097C1CB /* Transaction.swift */; };
+		93B6197121F02AFC0028AB9B /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6197021F02AFC0028AB9B /* DropDownButton.swift */; };
+		93C975AE21F4C70100511665 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C975AD21F4C70100511665 /* StartViewController.swift */; };
+		93E1BF7521F684DE00093857 /* APIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1BF7421F684DE00093857 /* APIAccess.swift */; };
+		93E463A221EC25C000AEAD5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E463A121EC25C000AEAD5D /* AppDelegate.swift */; };
+		93E463A721EC25C000AEAD5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E463A521EC25C000AEAD5D /* Main.storyboard */; };
+		93E463A921EC25C100AEAD5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E463A821EC25C100AEAD5D /* Assets.xcassets */; };
+		93E463AC21EC25C100AEAD5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E463AA21EC25C100AEAD5D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16717043272598ED811BDB27 /* Pods-flujopago.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flujopago.release.xcconfig"; path = "Pods/Target Support Files/Pods-flujopago/Pods-flujopago.release.xcconfig"; sourceTree = "<group>"; };
+		9305061221F6E8A8006C0120 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		9305061421F6F021006C0120 /* Cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cost.swift; sourceTree = "<group>"; };
+		9305061621F6F2F1006C0120 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
+		9320666D21F6C4C600357C61 /* PayMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethod.swift; sourceTree = "<group>"; };
+		9384B98421EEC39300AA9F42 /* StepOneMountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneMountViewController.swift; sourceTree = "<group>"; };
+		9384B98621EEC51600AA9F42 /* StepTwoPayMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoPayMethodViewController.swift; sourceTree = "<group>"; };
+		9384B98821EEC52E00AA9F42 /* StepThreeBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThreeBankViewController.swift; sourceTree = "<group>"; };
+		9384B98A21EEC54700AA9F42 /* StepFourFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFourFeeViewController.swift; sourceTree = "<group>"; };
+		9391A4A221F2D1470097C1CB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		93B6197021F02AFC0028AB9B /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		93C975AD21F4C70100511665 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		93E1BF7421F684DE00093857 /* APIAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccess.swift; sourceTree = "<group>"; };
+		93E4639E21EC25C000AEAD5D /* flujopago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flujopago.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E463A121EC25C000AEAD5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93E463A621EC25C000AEAD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93E463A821EC25C100AEAD5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93E463AB21EC25C100AEAD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93E463AD21EC25C100AEAD5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B92ECF22E4DDF62665AF170 /* Pods_flujopago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flujopago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD37A2414E191615F3A203B /* Pods-flujopago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flujopago.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flujopago/Pods-flujopago.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93E4639B21EC25C000AEAD5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836143441EE0C26FD6F50295 /* Pods_flujopago.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10A8800E8F80FDF3899B4229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B92ECF22E4DDF62665AF170 /* Pods_flujopago.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		844455331E791FCA5E1697BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFD37A2414E191615F3A203B /* Pods-flujopago.debug.xcconfig */,
+				16717043272598ED811BDB27 /* Pods-flujopago.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		936453DB21F5858100DDE32D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				93E1BF7421F684DE00093857 /* APIAccess.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		93E4639521EC25C000AEAD5D = {
+			isa = PBXGroup;
+			children = (
+				93E463A021EC25C000AEAD5D /* flujopago */,
+				93E4639F21EC25C000AEAD5D /* Products */,
+				844455331E791FCA5E1697BA /* Pods */,
+				10A8800E8F80FDF3899B4229 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		93E4639F21EC25C000AEAD5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93E4639E21EC25C000AEAD5D /* flujopago.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93E463A021EC25C000AEAD5D /* flujopago */ = {
+			isa = PBXGroup;
+			children = (
+				936453DB21F5858100DDE32D /* API */,
+				93E463B521EC273700AEAD5D /* Views */,
+				93E463B421EC271800AEAD5D /* Controllers */,
+				93E463B321EC271200AEAD5D /* Models */,
+				93E463A121EC25C000AEAD5D /* AppDelegate.swift */,
+				93E463A821EC25C100AEAD5D /* Assets.xcassets */,
+				93E463AD21EC25C100AEAD5D /* Info.plist */,
+			);
+			path = flujopago;
+			sourceTree = "<group>";
+		};
+		93E463B321EC271200AEAD5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9391A4A221F2D1470097C1CB /* Transaction.swift */,
+				9320666D21F6C4C600357C61 /* PayMethod.swift */,
+				9305061221F6E8A8006C0120 /* Bank.swift */,
+				9305061421F6F021006C0120 /* Cost.swift */,
+				9305061621F6F2F1006C0120 /* Installment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93E463B421EC271800AEAD5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9384B98421EEC39300AA9F42 /* StepOneMountViewController.swift */,
+				9384B98621EEC51600AA9F42 /* StepTwoPayMethodViewController.swift */,
+				9384B98821EEC52E00AA9F42 /* StepThreeBankViewController.swift */,
+				9384B98A21EEC54700AA9F42 /* StepFourFeeViewController.swift */,
+				93C975AD21F4C70100511665 /* StartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		93E463B521EC273700AEAD5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93E463A521EC25C000AEAD5D /* Main.storyboard */,
+				93E463AA21EC25C100AEAD5D /* LaunchScreen.storyboard */,
+				93B6197021F02AFC0028AB9B /* DropDownButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93E4639D21EC25C000AEAD5D /* flujopago */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E463B021EC25C100AEAD5D /* Build configuration list for PBXNativeTarget "flujopago" */;
+			buildPhases = (
+				E019F16433EBF61FCABA2140 /* [CP] Check Pods Manifest.lock */,
+				93E4639A21EC25C000AEAD5D /* Sources */,
+				93E4639B21EC25C000AEAD5D /* Frameworks */,
+				93E4639C21EC25C000AEAD5D /* Resources */,
+				F9223FC6709A9006D90D19B0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = flujopago;
+			productName = flujopago;
+			productReference = 93E4639E21EC25C000AEAD5D /* flujopago.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93E4639621EC25C000AEAD5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = rastorga;
+				TargetAttributes = {
+					93E4639D21EC25C000AEAD5D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 93E4639921EC25C000AEAD5D /* Build configuration list for PBXProject "flujopago" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93E4639521EC25C000AEAD5D;
+			productRefGroup = 93E4639F21EC25C000AEAD5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93E4639D21EC25C000AEAD5D /* flujopago */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93E4639C21EC25C000AEAD5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E463AC21EC25C100AEAD5D /* LaunchScreen.storyboard in Resources */,
+				93E463A921EC25C100AEAD5D /* Assets.xcassets in Resources */,
+				93E463A721EC25C000AEAD5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E019F16433EBF61FCABA2140 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flujopago-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9223FC6709A9006D90D19B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-flujopago/Pods-flujopago-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireMapper/AlamofireMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flujopago/Pods-flujopago-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93E4639A21EC25C000AEAD5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B6197121F02AFC0028AB9B /* DropDownButton.swift in Sources */,
+				93C975AE21F4C70100511665 /* StartViewController.swift in Sources */,
+				9391A4A321F2D1470097C1CB /* Transaction.swift in Sources */,
+				9384B98B21EEC54700AA9F42 /* StepFourFeeViewController.swift in Sources */,
+				9384B98721EEC51600AA9F42 /* StepTwoPayMethodViewController.swift in Sources */,
+				9320666E21F6C4C600357C61 /* PayMethod.swift in Sources */,
+				9305061721F6F2F1006C0120 /* Installment.swift in Sources */,
+				9384B98921EEC52E00AA9F42 /* StepThreeBankViewController.swift in Sources */,
+				9305061321F6E8A8006C0120 /* Bank.swift in Sources */,
+				9384B98521EEC39300AA9F42 /* StepOneMountViewController.swift in Sources */,
+				9305061521F6F021006C0120 /* Cost.swift in Sources */,
+				93E1BF7521F684DE00093857 /* APIAccess.swift in Sources */,
+				93E463A221EC25C000AEAD5D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93E463A521EC25C000AEAD5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93E463A621EC25C000AEAD5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93E463AA21EC25C100AEAD5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93E463AB21EC25C100AEAD5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93E463AE21EC25C100AEAD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93E463AF21EC25C100AEAD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93E463B121EC25C100AEAD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD37A2414E191615F3A203B /* Pods-flujopago.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWN22WZZ3Z;
+				INFOPLIST_FILE = flujopago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastorga.flujopago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93E463B221EC25C100AEAD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16717043272598ED811BDB27 /* Pods-flujopago.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWN22WZZ3Z;
+				INFOPLIST_FILE = flujopago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastorga.flujopago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93E4639921EC25C000AEAD5D /* Build configuration list for PBXProject "flujopago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E463AE21EC25C100AEAD5D /* Debug */,
+				93E463AF21EC25C100AEAD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E463B021EC25C100AEAD5D /* Build configuration list for PBXNativeTarget "flujopago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E463B121EC25C100AEAD5D /* Debug */,
+				93E463B221EC25C100AEAD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93E4639621EC25C000AEAD5D /* Project object */;
+}
